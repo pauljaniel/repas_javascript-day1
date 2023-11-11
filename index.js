@@ -172,21 +172,103 @@ let ageOfPerson = "24";
 //3. CONDITIONAL STATEMENT
     //If-else
         //password condition
+        let passwordinput =prompt("input password");
+
+        if(passwordinput == "p@ssw0rd")
+        {
+            console.log("registered");
+        }
+        else
+        {
+            console.log("incorrect password");
+        }
+
         //years of experience
-        //pwd discount
+
+        let yearsofexp = prompt("input your no of years of experience");
+
+        if(yearsofexp >= 5){
+            console.log ("you are qualified");
+        } 
+        else{
+            console.log("not enough experience")
+        }
+
+        // //pwd discount
+
+        let withPWD = prompt("Do you have pwd id?");
+
+        const fareCost = 13;
+
+        let finalAmount = 0;
+
+        finalAmount = fareCost;
+        if(Boolean(withPWD)){
+            finalAmount = fareCost - (fareCost * .20);
+        }
+        console.log('Total cost: $(finalAmount)');
+
         //withdrawal amount
 
+        let withdrawamount = prompt("input your amount to withdraw:");
+        let remaining = "error";
+        if(withdrawamount < 10000)
+        {
+            remaining = 10000 - withdrawamount;
+        }
+        console.log(remaining);
+        
 
     //switch-case
-        //tier- ss,s,a,b,c,d
-        //transporation fare/mode = jeep 13, bus 15, aircon-20, minibus-12, grab-200,lrt-15
+        // tier- ss,s,a,b,c,d
+
+        let tier = prompt("input tier ");
+        let message = '';
+        if (tier == 'ss'){
+            message = 'super lucky';
+        }
+        else if (tier == 's'){
+            message = "medyo lucky";
+        }
+        else if (tier == 'a'){
+            message = "lucky";
+        }
+        else if (tier == 'b'){
+            message = "unique";
+        }
+        else if (tier == 'c'){
+            message = "rare";
+        }
+
+        else if (tier == 'd'){
+            message = "common";
+        }
+        console.log(message);
+
+        let inputtier = prompt("enter tier:");
+        let tiers = {ss: "super lucky",
+                    s: "medyo lucky",
+                    a: "lucky",
+                    ss: "unique",
+                    ss: "rare",
+                    ss: "code"}
+        console.log(`VIA OBJECT   ${tiers [inputtier]}`);
+        // transporation fare/mode = jeep 13, bus 15, aircon-20, minibus-12, grab-200,lrt-15
         
 
 //4. LOOPS AND ITERATION
-    //for loops
-        //months loop
-        //print loop
-        //process loop
+    // for loops
+        // month++;
+        // ++month;
+        let montharr = ['jan', 'feb', 'mar', 'apr', 'may'];
+
+        for(let month=0; month <montharr.length; month++){
+            console.log(`month value: ${montharr[month]}`);
+        }
+
+        // months loop
+        // print loop
+        // process loop
         
 
     
